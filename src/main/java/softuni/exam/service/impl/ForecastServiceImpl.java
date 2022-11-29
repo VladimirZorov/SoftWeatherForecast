@@ -2,6 +2,7 @@ package softuni.exam.service.impl;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import softuni.exam.models.dto.ForecastSeedRootDto;
 import softuni.exam.repository.ForecastRepository;
 import softuni.exam.service.CityService;
 import softuni.exam.service.ForecastService;
@@ -47,7 +48,7 @@ public class ForecastServiceImpl implements ForecastService {
     public String importForecasts() throws IOException, JAXBException {
         StringBuilder sb = new StringBuilder();
 
-        xmlParser.fromFile(FORECASTS_FILE_PATH, ForecastSeedRootDto.class)
+        xmlParser.fromFile(FORECASTS_FILE_PATH, ForecastSeedRootDto.class);
 
 
 
